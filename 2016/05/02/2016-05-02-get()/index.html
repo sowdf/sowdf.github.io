@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/02/2016-05-02-get()/index.html">
 <meta property="og:site_name" content="战略性撤退">
 <meta property="og:description" content="这段时间主要学习JQ，分享JQ的一些小知识！">
-<meta property="og:updated_time" content="2016-05-02T15:10:52.000Z">
+<meta property="og:updated_time" content="2016-05-02T15:17:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第3期：JQ小知识.get()">
 <meta name="twitter:description" content="这段时间主要学习JQ，分享JQ的一些小知识！">
@@ -267,16 +267,16 @@
       
 
       
-        <p>#JQ中的get()</p>
-<p>这个属性还是比较常用的，有的时候会想我有JQ的目的是什么，不就就是因为JQ好用吗？那么为啥还要去把他转成原生呢？其实有时候是不得不转下面会举两个例子！</p>
-<p>##先说说get()的用法 </p>
-<p><a class="jsbin-embed" href="http://jsbin.com/zakiyu/embed?html,output" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+        <h1 id="JQ中的get"><a href="#JQ中的get" class="headerlink" title="JQ中的get()"></a>JQ中的get()</h1><p>这个属性还是比较常用的，有的时候会想我有JQ的目的是什么，不就就是因为JQ好用吗？那么为啥还要去把他转成原生呢？其实有时候是不得不转下面会举两个例子！</p>
+<h2 id="先说说get-的用法"><a href="#先说说get-的用法" class="headerlink" title="先说说get()的用法"></a>先说说get()的用法</h2><p><a class="jsbin-embed" href="http://jsbin.com/zakiyu/embed?html,output" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
 <p>从上面例子可以看出直接使用get()是没有用的，原因在于JQ选取的是一个集合就算是ID也是要加下标的</p>
-<p>##为什么要转成原生？<br>    在工作当中有时候JS真的没有办法做的事情就必须转成原生来做例如：<br>        1.获取内容的高度</p>
-<pre><code>2.元素之间的比较
-</code></pre><p>###1.获取元素的高度<br><a class="jsbin-embed" href="http://jsbin.com/bucoku/embed?html,console,output" target="_blank" rel="external">获取元素高度 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+<h2 id="为什么要转成原生？"><a href="#为什么要转成原生？" class="headerlink" title="为什么要转成原生？"></a>为什么要转成原生？</h2><pre><code>在工作当中有时候JS真的没有办法做的事情就必须转成原生来做例如：
+    1.获取内容的高度
+
+    2.元素之间的比较
+</code></pre><h3 id="1-获取元素的高度"><a href="#1-获取元素的高度" class="headerlink" title="1.获取元素的高度"></a>1.获取元素的高度</h3><p><a class="jsbin-embed" href="http://jsbin.com/bucoku/embed?html,console,output" target="_blank" rel="external">获取元素高度 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
 <p>像这样要获取这个带滚动条区域的真正高度在JQ下是没有办法获取的，所以必须转成原生转成原生的方式来获取</p>
-<p>###2.元素之间的比较<br><a class="jsbin-embed" href="http://jsbin.com/hukefe/embed?html,console,output" target="_blank" rel="external">元素间比较 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+<h3 id="2-元素之间的比较"><a href="#2-元素之间的比较" class="headerlink" title="2.元素之间的比较"></a>2.元素之间的比较</h3><p><a class="jsbin-embed" href="http://jsbin.com/hukefe/embed?html,console,output" target="_blank" rel="external">元素间比较 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
 <p>这两个东西取到的确实是同一个元素，但是JQ取到的是一个对象，是一个集合，所以 是不能比较的，必须转成原生才能比较，这个需要注意一些；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if([]==[]) //这两个相等吗 ？ </span><br><span class="line">if(&#123;&#125; == &#123;&#125;) //这个也是false</span><br></pre></td></tr></table></figure></p>
 <p>所以说对象与对象之间的比较还是需要注意一下的</p>
 
@@ -423,7 +423,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JQ中的get"><span class="nav-number">1.</span> <span class="nav-text">JQ中的get()</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先说说get-的用法"><span class="nav-number">1.1.</span> <span class="nav-text">先说说get()的用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要转成原生？"><span class="nav-number">1.2.</span> <span class="nav-text">为什么要转成原生？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取元素的高度"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.获取元素的高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-元素之间的比较"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.元素之间的比较</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
