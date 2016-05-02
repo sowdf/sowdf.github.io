@@ -1,0 +1,648 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="template,javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="模板技术真的是很火热了。在过去一段时间里面在项目里面大面积使用了artTemplate,整体体验还算良好，毕竟没有人愿意自己去拼接字符串。而且模板是直接Data2View的一道天然封装。是Data2View的必然之路。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="template 模板技术">
+<meta property="og:url" content="http://yoursite.com/2016/04/30/2016-04-30-template/index.html">
+<meta property="og:site_name" content="战略性撤退">
+<meta property="og:description" content="模板技术真的是很火热了。在过去一段时间里面在项目里面大面积使用了artTemplate,整体体验还算良好，毕竟没有人愿意自己去拼接字符串。而且模板是直接Data2View的一道天然封装。是Data2View的必然之路。">
+<meta property="og:image" content="http://7xpovu.com1.z0.glb.clouddn.com/2016-05-01_1.png?imageView/2/w/300/h/400/q/100">
+<meta property="og:image" content="http://7xpovu.com1.z0.glb.clouddn.com/2016-05-01_2.png-halt">
+<meta property="og:image" content="http://7xpovu.com1.z0.glb.clouddn.com/2016-05-01_3.png-halt">
+<meta property="og:image" content="http://7xpovu.com1.z0.glb.clouddn.com/20160502.png-halt">
+<meta property="og:updated_time" content="2016-05-02T10:46:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="template 模板技术">
+<meta name="twitter:description" content="模板技术真的是很火热了。在过去一段时间里面在项目里面大面积使用了artTemplate,整体体验还算良好，毕竟没有人愿意自己去拼接字符串。而且模板是直接Data2View的一道天然封装。是Data2View的必然之路。">
+<meta name="twitter:image" content="http://7xpovu.com1.z0.glb.clouddn.com/2016-05-01_1.png?imageView/2/w/300/h/400/q/100">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> template 模板技术 | 战略性撤退 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">战略性撤退</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">WebFrontEnd Development</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                template 模板技术
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-30T16:31:16+08:00" content="2016-04-30">
+              2016-04-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="文首的话"><a href="#文首的话" class="headerlink" title="文首的话"></a>文首的话</h1><p>这篇文章总结和自己尝试实现一下模板。然后总结下业界当前各种先进的模板技术。<br>算是一种锻炼吧，写了那么多业务，也用那么多轮子。自己来造轮子看看。</p>
+<h1 id="字符串模板的分析"><a href="#字符串模板的分析" class="headerlink" title="字符串模板的分析"></a>字符串模板的分析</h1><p>模板也有很多种，但是这里仅仅分析和实现基于字符串的模板。为了方便，这里就基于artTemplate的语法来分析模板应该具备怎样的功能。</p>
+<ol>
+<li>字符串中变量解析</li>
+<li>条件表达式</li>
+<li>遍历输出</li>
+</ol>
+<h2 id="字符串中变量解析"><a href="#字符串中变量解析" class="headerlink" title="字符串中变量解析"></a>字符串中变量解析</h2><p>先来弄第一个最简单功能，变量替换:<br>目标是实现下面代码:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123;</span><br><span class="line">	name:<span class="string">"张三"</span>,</span><br><span class="line">	age:<span class="string">"19"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> tplString = <span class="string">"&#123;&#123;name&#125;&#125;今年&#123;&#123;age&#125;&#125;岁"</span>;</span><br><span class="line"><span class="keyword">var</span> string = tpl(tplString,data);</span><br><span class="line"><span class="built_in">console</span>.log(string);</span><br><span class="line"><span class="comment">//张三今年19岁</span></span><br></pre></td></tr></table></figure></p>
+<p>下面是个人实现代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function tpl(str,data)&#123;</span><br><span class="line">  //定义抽出变量正则</span><br><span class="line">  var valReg = /[\&#123;]&#123;2&#125;\s*\w+\s*[\&#125;]&#123;2&#125;/g;</span><br><span class="line">  //获取字符串数组</span><br><span class="line">  var strArr = str.match(valReg); </span><br><span class="line">  //获取变量数组</span><br><span class="line">  var valArr = strArr.join(&quot;-&quot;).replace(/[\&#123;]&#123;2&#125;\s*/g,&quot;&quot;).replace(/\s*[\&#125;]&#123;2&#125;/g,&quot;&quot;).split(&quot;-&quot;);</span><br><span class="line">  </span><br><span class="line">  for(var i=0,len=strArr.length;i&lt;len;i++)&#123;</span><br><span class="line">    str=str.replace(strArr[i],data[valArr[i]]);</span><br><span class="line">  &#125;</span><br><span class="line">  return str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>整个函数很简单，只是简单的使用replace对变量进行了简单的替换。匹配和替换过程中对花括号之间的变量进行了去空格处理。<br>这个函数还比较粗糙，比如，它仅仅可以处理第一层的数据，假如使用zhangsan.name就会失败。这里先放放。我们继续看条件表达式的处理。</p>
+<h2 id="条件表达式"><a href="#条件表达式" class="headerlink" title="条件表达式"></a>条件表达式</h2><p>效果大概是这样的：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;if admin&#125;&#125;</span><br><span class="line">    &lt;p&gt;admin&lt;/p&gt;</span><br><span class="line">&#123;&#123;else if code &gt; 0&#125;&#125;</span><br><span class="line">    &lt;p&gt;master&lt;/p&gt;</span><br><span class="line">&#123;&#123;else&#125;&#125;</span><br><span class="line">    &lt;p&gt;error!&lt;/p&gt;</span><br><span class="line">&#123;&#123;/if&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>发现这个做起来挺麻烦的。主要要点：</p>
+<ol>
+<li>抽出多行模板文本</li>
+<li>模板文本转换成函数</li>
+<li>函数求值</li>
+</ol>
+<h3 id="抽出多行表达式"><a href="#抽出多行表达式" class="headerlink" title="抽出多行表达式"></a>抽出多行表达式</h3><p>首先要抽出从if开始到else到/if之间的文本。暂时写个可以用的正则匹配一下，不太严格：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var blockIfReg = /[\&#123;]&#123;2&#125;\s*if[\s\S]*[\&#123;]&#123;2&#125;\s*\/if[\&#125;]&#123;2&#125;/mg;</span><br><span class="line">//匹配出来的文本是这样的：</span><br><span class="line">//[&quot;&#123;&#123;if admin&amp;gt;0&#125;&#125;\n    &lt;p&gt;admin&lt;/p&gt;\n    &#123;&#123;else if code &amp;gt; 0&#125;&#125;\n    &lt;p&gt;master&lt;/p&gt;\n    &#123;&#123;else&#125;&#125;\n    &lt;p&gt;error!&lt;/p&gt;\n    &#123;&#123;/if&#125;&#125;&quot;]</span><br></pre></td></tr></table></figure></p>
+<p>其中↵代表的是换行符号。现在问题是如何优雅的把这个字符串转换为表达式了。。。</p>
+<p>先来把这个替换gt什么的符号还原一下,使用replace做这个替换:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mapObj = &#123;</span><br><span class="line">    <span class="string">"&amp;gt;"</span>:<span class="string">"&gt;"</span>,</span><br><span class="line">    <span class="string">"&amp;lt;"</span>:<span class="string">"&lt;"</span></span><br><span class="line">&#125;;</span><br><span class="line">   <span class="keyword">var</span> matchStringArr = s.match(blockIfReg)||[];</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> a <span class="keyword">in</span> mapObj)&#123;</span><br><span class="line">       matchStringArr = matchStringArr.map(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">return</span> v.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(a,<span class="string">'gm'</span>),mapObj[a]);</span><br><span class="line">       &#125;)</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中s是匹配的字符串数组,重点是replace里面的new RegExp(a,’gm’),这里使用了正则，需要替换所有的——顺便发现”字符串中变量解析”时候没有发现这个。回头补下bug。</p>
+<p>继续写个正则抽一抽，主要目的是把逻辑字符串抽出来：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">HTML：</span><br><span class="line">&lt;div id="tpl"&gt;</span><br><span class="line">    &#123;&#123;if admin&gt;0&#125;&#125;</span><br><span class="line">    &lt;p&gt;admin&lt;/p&gt;</span><br><span class="line">    &#123;&#123;else if code &lt; 0&#125;&#125;</span><br><span class="line">    &lt;p&gt;master&lt;/p&gt;</span><br><span class="line">    &#123;&#123;else&#125;&#125;</span><br><span class="line">    &lt;p&gt;error!&lt;/p&gt;</span><br><span class="line">    &#123;&#123;/if&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">JS：</span><br><span class="line">var s = document.getElementById("tpl");</span><br><span class="line">console.log(s.split(/[\&#123;]&#123;2&#125;\s*|\s*[\&#125;]&#123;2&#125;/gm));</span><br><span class="line">["", "if admin&gt;0", "↵admin↵↵", "else if code &gt; 0", "↵master↵↵", "else", "↵error!↵↵", "/if", ""]</span><br></pre></td></tr></table></figure></p>
+<p>这里干完以后发现有Bug:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id="tpl"&gt;</span><br><span class="line">    &#123;&#123;if admin&gt;0&#125;&#125;</span><br><span class="line">    &lt;p&gt;admin&lt;/p&gt;</span><br><span class="line">    &#123;&#123;else if code &lt; 0&#125;&#125;</span><br><span class="line">    &lt;p&gt;master&lt;/p&gt;</span><br><span class="line">    &#123;&#123;else&#125;&#125;</span><br><span class="line">    &lt;p&gt;error!&lt;/p&gt;</span><br><span class="line">    &#123;&#123;/if&#125;&#125;</span><br><span class="line"></span><br><span class="line">    &#123;&#123;if aaa&gt;0&#125;&#125;</span><br><span class="line">    &lt;p&gt;aaa&lt;/p&gt;</span><br><span class="line">    &#123;&#123;else if bbbb &lt; 0&#125;&#125;</span><br><span class="line">    &lt;p&gt;master&lt;/p&gt;</span><br><span class="line">    &#123;&#123;else&#125;&#125;</span><br><span class="line">    &lt;p&gt;error!&lt;/p&gt;</span><br><span class="line">    &#123;&#123;/if&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>此时有两个if结构了，但是<code>/[{]{2}\s*if[\s\S]*[{]{2}\s*\/if[}]{2}/mg</code>匹配成了一个，加个?干掉贪婪匹配：<code>/[{]{2}\s*if[\s\S]*?[{]{2}\s*\/if[}]{2}/mg</code> 现在可以了。可以获取匹配到两个包含字符串组成的数组.</p>
+<p>下面继续干活：目标是将字符串转换为函数</p>
+<p>先将字符串切一切：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//matchStringArr是上面说的两个包含字符串组成的数组</span></span><br><span class="line">matchStringArr=matchStringArr.map(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123;<span class="keyword">return</span> v.split(<span class="regexp">/[\&#123;]&#123;2&#125;\s*|\s*[\&#125;]&#123;2&#125;/gm</span>)&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(matchStringArr);</span><br></pre></td></tr></table></figure></p>
+<p>结果如图:<br><img src="http://7xpovu.com1.z0.glb.clouddn.com/2016-05-01_1.png?imageView/2/w/300/h/400/q/100" alt="1"></p>
+<p>继续往下处理一下，将其转换成可以用的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">matchStringArr=matchStringArr.map(function(v)&#123;</span><br><span class="line">    return transform(v);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">function transform(v)&#123;</span><br><span class="line">    var targetString = &quot;&quot;;</span><br><span class="line">    v.forEach(function(val,i)&#123;</span><br><span class="line">        if(val==&quot;&quot;)&#123;</span><br><span class="line">        &#125;else if(/^if/.test(val))&#123;</span><br><span class="line">            targetString+=&quot;if(&quot;+ val.split(&quot; &quot;)[1]+&quot;)&#123;&quot;+v[i+1]+&quot;&#125;&quot;;</span><br><span class="line">        &#125;else if(val.indexOf(&quot;else if&quot;)&gt;-1)&#123;</span><br><span class="line">            targetString+=&quot;else if(&quot;+val.replace(&quot;else if&quot;,&quot;&quot;)+&quot;)&#123;&quot;+v[i+1]+&quot;&#125;&quot;</span><br><span class="line">        &#125;else if(val.indexOf(&quot;else&quot;) &gt; -1)&#123;</span><br><span class="line">            targetString+=&quot;else&#123;&quot;+v[i+1]+&quot;&#125;&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    return targetString;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>console.log之：<br><img src="http://7xpovu.com1.z0.glb.clouddn.com/2016-05-01_2.png-halt" alt="2"></p>
+<p>到这里基本就差不多了。当然，现在这个函数就算执行了也没卵用，不过先不管，先将其弄成函数再说。究竟。。。有问题会报错的，到时候解决。<br>这里可以使用eval和Function-&gt;eval不建议使用，使用Function好了。</p>
+<h3 id="字符串转换函数"><a href="#字符串转换函数" class="headerlink" title="字符串转换函数"></a>字符串转换函数</h3><h4 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h4><p>Function方式构建函数平时几乎没有机会做。不过这里来尝试一下。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先来个简单的字符串传参</span></span><br><span class="line"><span class="keyword">var</span> sayAge = <span class="built_in">Function</span>(<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"return a+'的年龄是'+b"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(sayAge(<span class="string">"张三"</span>,<span class="string">"15"</span>))</span><br><span class="line"><span class="comment">//张三的年龄是15</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//传入对象看看</span></span><br><span class="line"><span class="keyword">var</span> sayAge = <span class="built_in">Function</span>(<span class="string">"a"</span>,<span class="string">"return a['name']+'的年龄是'+a['age']"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(sayAge(&#123;name:<span class="string">"李四"</span>,age:<span class="string">"18"</span>&#125;));</span><br><span class="line"><span class="comment">//李四的年龄是18</span></span><br></pre></td></tr></table></figure></p>
+<p>这样没啥问题了。完善下上面的东西。</p>
+<p>整理下之前弄出来的函数字符串：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(admin&gt;<span class="number">0</span>)&#123;</span><br><span class="line">	<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(code &lt; <span class="number">0</span>)&#123;</span><br><span class="line">	<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>master<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span> </span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	<span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>error!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是一个条件表达式,若干逻辑中取一个返回,先修一修让它可以正常工作<br>然后使用Function构建一个函数试试，这里要测试一下使用Function构建一下改造过的函数是否可以运行<br>这里是代码运行结果：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*处理好的字符串</span><br><span class="line">if(admin&gt;0)&#123;</span><br><span class="line">	return '&lt;p&gt;admin&lt;/p&gt;';</span><br><span class="line">&#125;else if(code &lt; 0)&#123;</span><br><span class="line">	return '&lt;p&gt;master&lt;/p&gt;'; </span><br><span class="line">&#125;else&#123;</span><br><span class="line">	return '&lt;p&gt;error!&lt;/p&gt;';</span><br><span class="line">&#125;;*/</span></span><br><span class="line"><span class="comment">//字符串先并为一行</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"if(admin&gt;0)&#123;return '&lt;p&gt;admin&lt;/p&gt;'&#125;else if(code &lt; 0)&#123;return '&lt;p&gt;master&lt;/p&gt;'&#125;else&#123;return '&lt;p&gt;error!&lt;/p&gt;'&#125;"</span>;</span><br><span class="line"><span class="keyword">var</span> testFun = <span class="built_in">Function</span>(<span class="string">"admin"</span>,<span class="string">"code"</span>,str);</span><br><span class="line"><span class="built_in">console</span>.log(testFun(<span class="number">1</span>,<span class="number">1</span>));</span><br><span class="line"><span class="built_in">console</span>.log(testFun(<span class="number">-1</span>,<span class="number">-1</span>));</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xpovu.com1.z0.glb.clouddn.com/2016-05-01_3.png-halt" alt="3"></p>
+<p>运行效果良好</p>
+<h4 id="完善transform"><a href="#完善transform" class="headerlink" title="完善transform"></a>完善transform</h4><p>这里为了上面代码正常工作改良一下原来的函数：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">transform</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> targetString = <span class="string">""</span>;</span><br><span class="line">    v.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">val,i</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(val==<span class="string">""</span>)&#123;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="regexp">/^if/</span>.test(val))&#123;</span><br><span class="line">            targetString+=<span class="string">"if("</span>+ val.split(<span class="string">" "</span>)[<span class="number">1</span>]+<span class="string">")&#123;return '"</span>+v[i+<span class="number">1</span>].replace(<span class="regexp">/^\s+|\s+$/g</span>,<span class="string">""</span>)+<span class="string">"'&#125;"</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(val.indexOf(<span class="string">"else if"</span>)&gt;<span class="number">-1</span>)&#123;</span><br><span class="line">            targetString+=<span class="string">"else if("</span>+val.replace(<span class="string">"else if"</span>,<span class="string">""</span>)+<span class="string">")&#123;return '"</span>+v[i+<span class="number">1</span>].replace(<span class="regexp">/^\s+|\s+$/g</span>,<span class="string">""</span>)+<span class="string">"'&#125;"</span></span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(val.indexOf(<span class="string">"else"</span>) &gt; <span class="number">-1</span>)&#123;</span><br><span class="line">            targetString+=<span class="string">"else&#123;return '"</span>+v[i+<span class="number">1</span>].replace(<span class="regexp">/^\s+|\s+$/g</span>,<span class="string">""</span>)+<span class="string">"'&#125;"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> targetString;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里添加了return，同时把无用的换空格干掉了,同时\s顺便把\n也换掉了。这样，上面的函数就可以很好的运行了。</p>
+<h4 id="Function内部变量处理"><a href="#Function内部变量处理" class="headerlink" title="Function内部变量处理"></a>Function内部变量处理</h4><p>到这里逻辑基本算是好了，现在面临的问题是，如何直接传入对象，让函数里面的表达式可以获取到而不需要加this[“admin”]什么。个人的想法是将该变量放到Function构造出的函数的上一层即可。</p>
+<p>测试代码:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> a <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    <span class="keyword">this</span>[a] = obj[a];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    getString:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> str = <span class="string">"if(admin&gt;0)&#123;return '&lt;p&gt;admin&lt;/p&gt;'&#125;else if(code &lt; 0)&#123;return '&lt;p&gt;master&lt;/p&gt;'&#125;else&#123;return '&lt;p&gt;error!&lt;/p&gt;'&#125;"</span>;</span><br><span class="line">    <span class="keyword">var</span> insertFn = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">''</span>,str);</span><br><span class="line">    <span class="keyword">return</span> insertFn.apply(<span class="keyword">this</span>,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a class="jsbin-embed" href="http://jsbin.com/seyuyu/embed?js,console" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+<p>还算成功，可以顺便把之前无法读zhangsan.name这种问题统统解决掉。</p>
+<p>包装修缮一下门面：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"if(admin&gt;0)&#123;return '&lt;p&gt;admin&lt;/p&gt;'&#125;else if(code &lt; 0)&#123;return '&lt;p&gt;master&lt;/p&gt;'&#125;else&#123;return '&lt;p&gt;error!&lt;/p&gt;'&#125;"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getTplChunk</span>(<span class="params">obj,fnString</span>)</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">tmp</span>(<span class="params">obj,fnString</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> a <span class="keyword">in</span> obj)&#123;</span><br><span class="line">      <span class="keyword">this</span>[a] = obj[a];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      getString:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> insertFn = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">''</span>,fnString);</span><br><span class="line">        <span class="keyword">return</span> insertFn.apply(<span class="keyword">this</span>,<span class="literal">null</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">var</span> target = tmp(obj,fnString).getString();</span><br><span class="line">  tmp=<span class="literal">null</span>;	<span class="comment">//销毁闭包</span></span><br><span class="line">  <span class="keyword">return</span> target;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  admin:<span class="number">1</span>,</span><br><span class="line">  code:<span class="number">1</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(getTplChunk(obj,str));</span><br></pre></td></tr></table></figure></p>
+<p>demo:<br><a class="jsbin-embed" href="http://jsbin.com/hicivuq/embed?js,console" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+<p>至此上面两个要点就OK了。</p>
+<h4 id="话外之With"><a href="#话外之With" class="headerlink" title="话外之With"></a>话外之With</h4><p>这里使用了闭包和作用域链来实现了代码不加前缀实现变量暴露。除此以外，一个看似更可能更好的实现这个功能的，是with语句。with可以创建一个作用域，在作用域内，在引用特定对象属性时候可以不使用前缀。这是几乎更加契合场景的实现。<br>但是《JavaScript:The Good Parts》作者已经说过”with Statement considered Harmful”，并且ES5的use strict已经禁用了它。那么就放弃使用它吧。反正。。。使用作用域链，我也把它实现了。。。</p>
+<h2 id="变量解析和表达式整理"><a href="#变量解析和表达式整理" class="headerlink" title="变量解析和表达式整理"></a>变量解析和表达式整理</h2><p>至此前两个逻辑已经OK，但是两个逻辑之间有些碎片化。我们整理一下代码思路进行重构:</p>
+<ol>
+<li>模板函数接受元素id和数据进行内部操作</li>
+<li>内部操作环节对模板字符串进行分解<ul>
+<li>变量</li>
+<li>表达式</li>
+<li>遍历</li>
+</ul>
+</li>
+<li>依次调用不同方法进行替换并返回最终字符串</li>
+</ol>
+<p>目前只整理了字符串和表达式的处理方式，下面是，整理好的代码，直接放到jsbin了，贴到博文太长不方便看。<br><a class="jsbin-embed" href="http://jsbin.com/botage/embed?html,js,console" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+<p>这里需要说的是，逻辑先处理了表达式再处理了字符串，主要是考虑到这个会通字符串匹配冲突。同时之前发现的若干很明显的bug都修好了。</p>
+<h2 id="遍历表达式"><a href="#遍历表达式" class="headerlink" title="遍历表达式"></a>遍历表达式</h2><p>遍历表达式的模板语法是这样的:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;each list as value index&#125;&#125;</span><br><span class="line">    &lt;li&gt;&#123;&#123;index&#125;&#125; - &#123;&#123;value.user&#125;&#125;&lt;/li&gt;</span><br><span class="line">&#123;&#123;/each&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>首先，要把它抽取出来，这里使用正则抽取它。<code>/[{]{2}each\s.*[}]{2}[\s\S]*[{]{2}\/each[}]{2}/gm</code>,找个了HTML页面测试通过。</p>
+<p>接下来要把他换算成表达式。like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var target = &quot;&quot;</span><br><span class="line">list.forEach(function(value,index)&#123;</span><br><span class="line">	target += &apos;&lt;li&gt;&#123;&#123;index&#125;&#125; - &#123;&#123;value.user&#125;&#125;&lt;/li&gt;&apos;;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>直接改造下transform函数好了，给它加个type参数分类处理。<br>然后获取下列关注点的变量字符串<br><img src="http://7xpovu.com1.z0.glb.clouddn.com/20160502.png-halt" alt="4"></p>
+<p>正则提取: <code>/[{]{2}each\s+(\w+)\s+as\s+(\w+)\s+(\w+)*[}]{2}([\s\S]*)[{]{2}\/each[}]{2}/gm</code></p>
+<p>改造的transform分支2:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#125;else if(type===2)&#123;</span><br><span class="line">    var reg = /[\&#123;]&#123;2&#125;each\s+(\w+)\s+as\s+(\w+)\s+(\w+)*[\&#125;]&#123;2&#125;([\s\S]*)[\&#123;]&#123;2&#125;\/each[\&#125;]&#123;2&#125;/gm;</span><br><span class="line">    v = reg.exec(v);</span><br><span class="line">    targetString = &apos;var a =&quot;&quot;;&apos;+v[1]+&apos;.forEach(function(&apos;+v[2]+&apos;,&apos;+v[3]+&apos;)&#123;&apos;</span><br><span class="line">                   +  &apos;a += &quot;&lt;li&gt;&#123;&#123;index&#125;&#125; - &#123;&#123;value.user&#125;&#125;&lt;/li&gt;&quot;&apos;</span><br><span class="line">                   +&apos;&#125;);return a;&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>现在问题是li里面的变量不解析，那么我们复用一下字符串解析函数好了，之前保留了data参数可以传参进去。<br>现在是这样:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#125;else if(type===2)&#123;</span><br><span class="line">    var reg = /[\&#123;]&#123;2&#125;each\s+(\w+)\s+as\s+(\w+)\s+(\w+)*[\&#125;]&#123;2&#125;([\s\S]*)[\&#123;]&#123;2&#125;\/each[\&#125;]&#123;2&#125;/gm;</span><br><span class="line">    v = reg.exec(v);</span><br><span class="line">    targetString =</span><br><span class="line"></span><br><span class="line">    targetString += &apos;var a =&quot;&quot;;&apos;+v[1]+&apos;.forEach(function(&apos;+v[2]+&apos;,&apos;+v[3]+&apos;)&#123;&apos;</span><br><span class="line">                   +  &apos;a += &apos;+&apos;fn1(&quot;&apos;+v[4].replace(/\s/g,&quot;&quot;)+&apos;&quot;,&apos;+v[2]+&apos;)&apos;</span><br><span class="line">                   +&apos;&#125;);return a;&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>此时问题是fn1获取不到，改下getTplChunk:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function getTplChunk(obj,fnString)&#123;</span><br><span class="line">    function tmp(obj,fnString)&#123;</span><br><span class="line">        var isFunction = (Object.prototype.toString.call(fnString)===&quot;[object Function]&quot;);</span><br><span class="line">        for(var a in obj)&#123;</span><br><span class="line">            this[a] = obj[a];</span><br><span class="line">        &#125;;</span><br><span class="line">        this[&quot;fn1&quot;]=fn1;</span><br><span class="line">        return &#123;</span><br><span class="line">            getString:function()&#123;</span><br><span class="line">                var insertFn = isFunction?fnString:(new Function(&apos;&apos;,fnString));</span><br><span class="line">                return insertFn.apply(this,null);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    var target = tmp(obj,fnString).getString();</span><br><span class="line">    tmp=null;	//销毁闭包</span><br><span class="line">    return target;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>将this[“fn1”]=fn1;假如到作用域上边去;<br>此时console出来的值:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;li&gt;undefined-&#123;&#123;value.user&#125;&#125;&lt;/li&gt;&lt;li&gt;undefined-&#123;&#123;value.user&#125;&#125;&lt;/li&gt;</span><br></pre></td></tr></table></figure></p>
+<p>存在两个问题:</p>
+<ol>
+<li>index索引不在作用域链上</li>
+<li>加了点号的变量无法解析&amp;value.user的方式和上文的不太一样。</li>
+</ol>
+<p>第2点如此处理:</p>
+<ul>
+<li>改下正则匹配: <code>var valReg = /[{]{2}\s*\w+[.\w+]*\s*[}]{2}/g;</code>这样可以获取花括号里面的东西。</li>
+<li>使用正则干掉前面的前缀引用，这样可以复用之前的逻辑。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">targetString += <span class="string">'var a ="";'</span>+v[<span class="number">1</span>]+<span class="string">'.forEach(function('</span>+v[<span class="number">2</span>]+<span class="string">','</span>+v[<span class="number">3</span>]+<span class="string">')&#123;'</span></span><br><span class="line">               +  <span class="string">'a += '</span>+<span class="string">'fn1("'</span>+v[<span class="number">4</span>].replace(<span class="regexp">/\s/g</span>,<span class="string">""</span>).replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(v[<span class="number">2</span>]+<span class="string">'.'</span>,<span class="string">"gm"</span>),<span class="string">""</span>)+<span class="string">'",'</span>+v[<span class="number">2</span>]+<span class="string">')'</span></span><br><span class="line">               +<span class="string">'&#125;);return a;'</span>;</span><br></pre></td></tr></table></figure>
+<p>第1点参照第2点加变量的方式，可以同样处理，由于index是动态的，那么就要动态传参到fn1了。不过fn1本身会接受一个data，我们加到里面去就ok了。但是在这里上下文不是很好理清，同时，一个变量最终解析时候到底是变量，还是字符串，必须要小心处理。</p>
+<p>现在是处理后的：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(type===<span class="number">2</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> reg = <span class="regexp">/[\&#123;]&#123;2&#125;each\s+(\w+)\s+as\s+(\w+)\s+(\w+)*[\&#125;]&#123;2&#125;([\s\S]*)[\&#123;]&#123;2&#125;\/each[\&#125;]&#123;2&#125;/gm</span>;</span><br><span class="line">    v = reg.exec(v);</span><br><span class="line"></span><br><span class="line">    targetString += <span class="string">'var a ="";'</span>+v[<span class="number">1</span>]+<span class="string">'.forEach(function('</span>+v[<span class="number">2</span>]+<span class="string">','</span>+v[<span class="number">3</span>]+<span class="string">')&#123;'</span></span><br><span class="line">                   +  <span class="string">'a += '</span>+<span class="string">'fn1("'</span>+v[<span class="number">4</span>].replace(<span class="regexp">/\s/g</span>,<span class="string">""</span>).replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(v[<span class="number">2</span>]+<span class="string">'.'</span>,<span class="string">"gm"</span>),<span class="string">""</span>)+<span class="string">'",addAttr('</span>+ v[<span class="number">2</span>] +<span class="string">',&#123;"'</span>+v[<span class="number">3</span>]+<span class="string">'":'</span>+v[<span class="number">3</span>]+<span class="string">'&#125;))'</span></span><br><span class="line">                   +<span class="string">'&#125;);return a;'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>——我加了一个addAttr函数到getTplChunk了。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addAttr</span>(<span class="params">target,obj</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> a <span class="keyword">in</span> obj)&#123;</span><br><span class="line">        target[a] = obj[a];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> target;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>至此模板的工作初步完工了，考虑到字符串渲染如果排在each渲染之前，那么会导致它破坏了each里面字符串，因此我们把fn3放在最前面工作。我们来个Demo渲染包含三种表达式的模板看看。</p>
+<p><a class="jsbin-embed" href="http://jsbin.com/nojotex/embed?html,js,output" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+<p>至此，模板就算编写完毕了。现在它还存在一个比较明显的bug：</p>
+<ul>
+<li>if-else之间不能存在变量</li>
+</ul>
+<p>有空的话我在补起来,主要是正则需要完善。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这里就实现了不太完善的类似artTemplate的模板——全程没有看过artTemplate源码哦。<br>这里说下自己对基于字符串模板的体会：</p>
+<ol>
+<li>简单:删掉注释和空行不压缩101行,随便两个花括号放一行就能到100行了,最核心的是三个replace就OK了。</li>
+<li>复杂：<ul>
+<li>当逻辑从字符串抽出时候需要依赖大量相对复杂的正则</li>
+<li>with存在性能低下和被ES5严格模式废弃问题，需要使用其他方式规避</li>
+<li>使用相对偏门的Function构造函数(不是eval)和构造函数的上下文，以及如何进行变量传递等</li>
+</ul>
+</li>
+</ol>
+<h1 id="其他模板技术-amp-amp-碎碎念"><a href="#其他模板技术-amp-amp-碎碎念" class="headerlink" title="其他模板技术&amp;&amp;碎碎念"></a>其他模板技术&amp;&amp;碎碎念</h1><p>本来想写一写其他模板技术的观望的，发现一篇资料，大家可以前往观望。<br>文首有一句话是:</p>
+<blockquote>
+<p>此文的写作耗时很长，称之为雄文不为过，小心慢用</p>
+</blockquote>
+<p>个人深以为然。说是雄文确实不为过。</p>
+<p>前端组件之争，好像有些陷入模板之争。</p>
+<p>最早的时候，Backbone让我们从满是jQuery选择器的沼泽里面拖出来。<br>然后是AngularJS，双向绑定让我们知道了原来操作DOM可以不用去手工获取和修改节点。<br>然后是React，组件化的特性，让我们知道了，应用可以像积木一样拼起来，有时候HTML都可以不用写了。</p>
+<p>MVC，M和C是如此稳定没有见到玩出太多花样，而面向用户的V层发展到越来越深。</p>
+<p>innerHTML如此流行，我以为这是IE干过最积极的事情。Backbone这类MVC框架依赖模板来将数据转换为HTML字符串，然后使用innerHTML来数据插入。innerHTML是如此快速，以至于大面积的DOM操作几乎没有别的选择；但是它又是如此慢，大面积的模板渲染里面即使只进行最小粒度的更新，它也会全部更新一次，顺便——撸掉你绑定的事件。</p>
+<p>AngularJS如果视为模板，有些不合适，因为它做了模板以外的事情(事实上，我一直认为，只有基于字符串的模板，才能算是纯正的模板)。但是它确实是如此好用——如果你精熟而非遇到问题束手无策的普通用户的话。<br>AngularJS在双向绑定方案上使用了脏检测方案，每个双向绑定的元素会存在一个watcher，当触发检测时候会一个个进行对比，然后进行View或者Model的更新。显然，这种方式让优雅和性能洁癖的工程师会有看法。</p>
+<p>至于React，我个人认为它最大的贡献除了是小粒度的innerHTML，还有组件化开发方式。——webComponent，感觉入前端以来，从未有一个概念如此让人心往神驰。</p>
+<p>好了，不碎嘴了。大家看文章去:</p>
+<p>点此前往: <a href="http://www.html-js.com/article/Regularjs-Chinese-guidelines-for-a-comprehensive-summary-of-the-front-template-technology" target="_blank" rel="external">一个对前端模板技术的全面总结</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/template/" rel="tag">#template</a>
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="战略性撤退" />
+          <p class="site-author-name" itemprop="name">战略性撤退</p>
+          <p class="site-description motion-element" itemprop="description">自己的学习记录</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文首的话"><span class="nav-number">1.</span> <span class="nav-text">文首的话</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串模板的分析"><span class="nav-number">2.</span> <span class="nav-text">字符串模板的分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串中变量解析"><span class="nav-number">2.1.</span> <span class="nav-text">字符串中变量解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件表达式"><span class="nav-number">2.2.</span> <span class="nav-text">条件表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽出多行表达式"><span class="nav-number">2.2.1.</span> <span class="nav-text">抽出多行表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串转换函数"><span class="nav-number">2.2.2.</span> <span class="nav-text">字符串转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Function"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完善transform"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">完善transform</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Function内部变量处理"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">Function内部变量处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#话外之With"><span class="nav-number">2.2.2.4.</span> <span class="nav-text">话外之With</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量解析和表达式整理"><span class="nav-number">2.3.</span> <span class="nav-text">变量解析和表达式整理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遍历表达式"><span class="nav-number">2.4.</span> <span class="nav-text">遍历表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.5.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他模板技术-amp-amp-碎碎念"><span class="nav-number">3.</span> <span class="nav-text">其他模板技术&&碎碎念</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">战略性撤退</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
