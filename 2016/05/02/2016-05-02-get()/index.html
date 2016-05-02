@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JQuery,javascript," />
 
 
 
@@ -80,15 +80,16 @@
 
 
 
-<meta name="description" content="自己的学习记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="战略性撤退">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="这段时间主要学习JQ，分享JQ的一些小知识！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第3期：JQ小知识.get()">
+<meta property="og:url" content="http://yoursite.com/2016/05/02/2016-05-02-get()/index.html">
 <meta property="og:site_name" content="战略性撤退">
-<meta property="og:description" content="自己的学习记录">
+<meta property="og:description" content="这段时间主要学习JQ，分享JQ的一些小知识！">
+<meta property="og:updated_time" content="2016-05-02T15:10:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="战略性撤退">
-<meta name="twitter:description" content="自己的学习记录">
+<meta name="twitter:title" content="第3期：JQ小知识.get()">
+<meta name="twitter:description" content="这段时间主要学习JQ，分享JQ的一些小知识！">
 
 
 
@@ -106,7 +107,7 @@
   };
 </script>
 
-  <title> 归档 | 战略性撤退 </title>
+  <title> 第3期：JQ小知识.get() | 战略性撤退 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -127,7 +128,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -205,103 +206,133 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 2 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/05/02/2016-05-02-get()/" itemprop="url">
-              
-                <span itemprop="name">第3期：JQ小知识.get()</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-02T23:00:16+08:00"
-              content="2016-05-02" >
-          05-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/04/30/2016-04-30-template/" itemprop="url">
-              
-                <span itemprop="name">template 模板技术</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-30T16:31:16+08:00"
-              content="2016-04-30" >
-          04-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                第3期：JQ小知识.get()
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-02T23:00:16+08:00" content="2016-05-02">
+              2016-05-02
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#JQ中的get()</p>
+<p>这个属性还是比较常用的，有的时候会想我有JQ的目的是什么，不就就是因为JQ好用吗？那么为啥还要去把他转成原生呢？其实有时候是不得不转下面会举两个例子！</p>
+<p>##先说说get()的用法 </p>
+<p><a class="jsbin-embed" href="http://jsbin.com/zakiyu/embed?html,output" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+<p>从上面例子可以看出直接使用get()是没有用的，原因在于JQ选取的是一个集合就算是ID也是要加下标的</p>
+<p>##为什么要转成原生？<br>    在工作当中有时候JS真的没有办法做的事情就必须转成原生来做例如：<br>        1.获取内容的高度</p>
+<pre><code>2.元素之间的比较
+</code></pre><p>###1.获取元素的高度<br><a class="jsbin-embed" href="http://jsbin.com/bucoku/embed?html,console,output" target="_blank" rel="external">获取元素高度 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+<p>像这样要获取这个带滚动条区域的真正高度在JQ下是没有办法获取的，所以必须转成原生转成原生的方式来获取</p>
+<p>###2.元素之间的比较<br><a class="jsbin-embed" href="http://jsbin.com/hukefe/embed?html,console,output" target="_blank" rel="external">元素间比较 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
+<p>这两个东西取到的确实是同一个元素，但是JQ取到的是一个对象，是一个集合，所以 是不能比较的，必须转成原生才能比较，这个需要注意一些；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if([]==[]) //这两个相等吗 ？ </span><br><span class="line">if(&#123;&#125; == &#123;&#125;) //这个也是false</span><br></pre></td></tr></table></figure></p>
+<p>所以说对象与对象之间的比较还是需要注意一下的</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JQuery/" rel="tag">#JQuery</a>
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/30/2016-04-30-template/" rel="next" title="template 模板技术">
+                <i class="fa fa-chevron-left"></i> template 模板技术
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -309,6 +340,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -328,8 +363,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/default_avatar.jpg"
@@ -372,6 +416,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -468,11 +523,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
