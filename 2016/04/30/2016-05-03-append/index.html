@@ -88,7 +88,7 @@
 <meta property="og:description" content="jQuery插入操作在开发中使用的还是较为频繁的，所以帮各位复习一下这8种插入操作！">
 <meta property="og:image" content="http://srs.sowdf.com/images/2016050301.png">
 <meta property="og:image" content="http://srs.sowdf.com/images/2016050302.png">
-<meta property="og:updated_time" content="2016-05-03T23:41:45.000Z">
+<meta property="og:updated_time" content="2016-05-03T23:47:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第4期：JQ中的插入操作">
 <meta name="twitter:description" content="jQuery插入操作在开发中使用的还是较为频繁的，所以帮各位复习一下这8种插入操作！">
@@ -277,16 +277,33 @@
       
 
       
-        <h1 id="第4期：JQ中的节点的插入操作"><a href="#第4期：JQ中的节点的插入操作" class="headerlink" title="第4期：JQ中的节点的插入操作"></a>第4期：JQ中的节点的插入操作</h1><p>本期讲述的是JQ中的各种插入操作 ，本期主要讲述的是我们常用的方法，</p>
-<pre><code>JQ中常用的添加节点的常用方式应该有8种，分别是
-
- 插到指定元素的前面 | 插到指定元素的后面 | 插到指定元素里面的最后面 | 插到指定元素的里面的最前面 
-------------------|------------------|----------|----------- 
- insertBefore | insertAfter | appendTo | prependTo 
-       before   |     after   |  append  |  prepend  
-
-主要是分为这两大类的插入，一类长的，一类短的，看自己喜欢；
-</code></pre><p>下面为大家介绍这两类的用法<br><a class="jsbin-embed" href="http://jsbin.
+        <h1 id="第4期：JQ中的节点的插入操作"><a href="#第4期：JQ中的节点的插入操作" class="headerlink" title="第4期：JQ中的节点的插入操作"></a>第4期：JQ中的节点的插入操作</h1><p>本期讲述的是JQ中的各种插入操作 ，本期主要讲述的是我们常用的方法，<br>JQ中常用的添加节点的常用方式应该有8种，分别是</p>
+<table>
+<thead>
+<tr>
+<th>插到指定元素的前面</th>
+<th>插到指定元素的后面</th>
+<th>插到指定元素里面的最后面</th>
+<th>插到指定元素的里面的最前面 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>     insertBefore</td>
+<td>insertAfter</td>
+<td>appendTo</td>
+<td>prependTo </td>
+</tr>
+<tr>
+<td>           before</td>
+<td>after</td>
+<td>append</td>
+<td>prepend       </td>
+</tr>
+</tbody>
+</table>
+<p>主要是分为这两大类的插入，一类长的，一类短的，看自己喜欢；</p>
+<p>下面为大家介绍这两类的用法<br><a class="jsbin-embed" href="http://jsbin.
 com/kuxile/embed?html,js,output" target="_blank" rel="external">元素插入 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
 <p><img src="http://srs.sowdf.com/images/2016050301.png" alt="插入解释"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：perpend 这个方法原生是没有这种插入方式的</span><br></pre></td></tr></table></figure></p>
 <p><img src="http://srs.sowdf.com/images/2016050302.png" alt="插入解释"></p>
