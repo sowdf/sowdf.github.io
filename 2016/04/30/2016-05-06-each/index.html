@@ -80,19 +80,16 @@
 
 
 
-<meta name="description" content="jQuery插入操作在开发中使用的还是较为频繁的，所以帮各位复习一下这8种插入操作！">
+<meta name="description" content="jQuery中的each函数详解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第4期：JQ中的插入操作">
-<meta property="og:url" content="http://yoursite.com/2016/04/30/2016-05-03-append/index.html">
+<meta property="og:title" content="第5期：JQ中的each">
+<meta property="og:url" content="http://yoursite.com/2016/04/30/2016-05-06-each/index.html">
 <meta property="og:site_name" content="战略性撤退">
-<meta property="og:description" content="jQuery插入操作在开发中使用的还是较为频繁的，所以帮各位复习一下这8种插入操作！">
-<meta property="og:image" content="http://srs.sowdf.com/images/2016050301.png">
-<meta property="og:image" content="http://srs.sowdf.com/images/2016050302.png">
-<meta property="og:updated_time" content="2016-05-03T23:47:29.000Z">
+<meta property="og:description" content="jQuery中的each函数详解">
+<meta property="og:updated_time" content="2016-05-06T00:08:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第4期：JQ中的插入操作">
-<meta name="twitter:description" content="jQuery插入操作在开发中使用的还是较为频繁的，所以帮各位复习一下这8种插入操作！">
-<meta name="twitter:image" content="http://srs.sowdf.com/images/2016050301.png">
+<meta name="twitter:title" content="第5期：JQ中的each">
+<meta name="twitter:description" content="jQuery中的each函数详解">
 
 
 
@@ -110,7 +107,7 @@
   };
 </script>
 
-  <title> 第4期：JQ中的插入操作 | 战略性撤退 </title>
+  <title> 第5期：JQ中的each | 战略性撤退 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -230,7 +227,7 @@
             
             
               
-                第4期：JQ中的插入操作
+                第5期：JQ中的each
               
             
           </h1>
@@ -253,8 +250,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/30/2016-05-03-append/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/30/2016-05-03-append/" itemprop="commentsCount"></span>
+                <a href="/2016/04/30/2016-05-06-each/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/30/2016-05-06-each/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -277,38 +274,14 @@
       
 
       
-        <h1 id="第4期：JQ中的节点的插入操作"><a href="#第4期：JQ中的节点的插入操作" class="headerlink" title="第4期：JQ中的节点的插入操作"></a>第4期：JQ中的节点的插入操作</h1><p>本期讲述的是JQ中的各种插入操作 ，本期主要讲述的是我们常用的方法，<br>JQ中常用的添加节点的常用方式应该有8种，分别是</p>
-<table>
-<thead>
-<tr>
-<th>插到指定元素的前面</th>
-<th>插到指定元素的后面</th>
-<th>插到指定元素里面的最后面</th>
-<th>插到指定元素的里面的最前面 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>     insertBefore</td>
-<td>insertAfter</td>
-<td>appendTo</td>
-<td>prependTo </td>
-</tr>
-<tr>
-<td>           before</td>
-<td>after</td>
-<td>append</td>
-<td>prepend       </td>
-</tr>
-</tbody>
-</table>
-<p>主要是分为这两大类的插入，一类长的，一类短的，看自己喜欢；</p>
-<p>下面为大家介绍这两类的用法<br><a class="jsbin-embed" href="http://jsbin.
-com/kuxile/embed?html,js,output" target="_blank" rel="external">元素插入 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
-<p><img src="http://srs.sowdf.com/images/2016050301.png" alt="插入解释"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：perpend 这个方法原生是没有这种插入方式的</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://srs.sowdf.com/images/2016050302.png" alt="插入解释"></p>
-<p>这个长的插入方式和短的插入的方式的区别在于：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">短的的插入，要插入的元素在后面，长的插入，要插入的元素在前面</span><br></pre></td></tr></table></figure>
+        <h1 id="第5期：each详解"><a href="#第5期：each详解" class="headerlink" title="第5期：each详解"></a>第5期：each详解</h1><h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p> 在JQ操作中其实大部分时候是不需要循环操作的，例如你要页面中所有的li变红，$li.css(‘background’,’red’);那为什么还要提供这个方法呢？如果你要对li添加上对应的索引，所以这个整体方法操作起来具有局限性，当你要对一个集合的元素进行复杂操作的时候，这时你们就可以使用each这个方法,这个方法相当于原生中的for;</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>$(selector).each(function(i,elem));<br>i : 相当于for循环中的i也就是元素的下标，也可以认为是索引<br>elem : 表示的是每一个元素 </p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;li&apos;).each(function(i,elem)&#123;</span><br><span class="line">	$(elem).text(i);</span><br><span class="line">	elem.style.background = &apos;red&apos;;</span><br><span class="line">	//$(this).css(&apos;background&apos;,&apos;red&apos;); //这样写也是可以的 this == elem</span><br><span class="line">	//$(elem).css(&apos;background&apos;,&apos;red&apos;); //这样写也是可以的</span><br><span class="line">	if(i &gt; 4)&#123;</span><br><span class="line">		return false; //跳出循环</span><br><span class="line">	&#125;</span><br><span class="line">			</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><pre><code> 1.each中的elem = this ，在each中this的指向是elem
+ 2.跳出遍历须使用return false 
+ 3.elem返回的其实是个原生的元素
+4.跳出for循环使用break
+</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>each重点是知道each中的两个方法代表的什么，this和elem是一回事！</p>
 
       
     </div>
@@ -340,12 +313,16 @@ com/kuxile/embed?html,js,output" target="_blank" rel="external">元素插入 on 
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/30/2016-04-30-template/" rel="next" title="template 模板技术">
+                <i class="fa fa-chevron-left"></i> template 模板技术
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/30/2016-04-30-template/" rel="prev" title="template 模板技术">
-                template 模板技术 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/30/2016-04-30-index/" rel="prev" title="第5期：JQ中的index()">
+                第5期：JQ中的index() <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -372,8 +349,8 @@ com/kuxile/embed?html,js,output" target="_blank" rel="external">元素插入 on 
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/30/2016-05-03-append/"
-           data-title="第4期：JQ中的插入操作" data-url="http://yoursite.com/2016/04/30/2016-05-03-append/">
+      <div class="ds-thread" data-thread-key="2016/04/30/2016-05-06-each/"
+           data-title="第5期：JQ中的each" data-url="http://yoursite.com/2016/04/30/2016-05-06-each/">
       </div>
     
   </div>
@@ -457,7 +434,7 @@ com/kuxile/embed?html,js,output" target="_blank" rel="external">元素插入 on 
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第4期：JQ中的节点的插入操作"><span class="nav-number">1.</span> <span class="nav-text">第4期：JQ中的节点的插入操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第5期：each详解"><span class="nav-number">1.</span> <span class="nav-text">第5期：each详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本介绍"><span class="nav-number">1.1.</span> <span class="nav-text">基本介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">1.2.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip"><span class="nav-number">1.4.</span> <span class="nav-text">Tip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
