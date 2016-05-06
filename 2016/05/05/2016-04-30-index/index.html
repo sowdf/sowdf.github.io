@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript,JQuery," />
+  <meta name="keywords" content="jQuery,javascript," />
 
 
 
@@ -80,16 +80,18 @@
 
 
 
-<meta name="description" content="这段时间主要学习JQ，分享JQ的一些小知识！">
+<meta name="description" content="jQuery中的clone()和index() 函数详解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第3期：JQ小知识.get()">
-<meta property="og:url" content="http://yoursite.com/2016/05/02/2016-05-02-get()/index.html">
+<meta property="og:title" content="第5期：JQ中的index()">
+<meta property="og:url" content="http://yoursite.com/2016/05/05/2016-04-30-index/index.html">
 <meta property="og:site_name" content="战略性撤退">
-<meta property="og:description" content="这段时间主要学习JQ，分享JQ的一些小知识！">
-<meta property="og:updated_time" content="2016-05-02T15:17:53.000Z">
+<meta property="og:description" content="jQuery中的clone()和index() 函数详解">
+<meta property="og:image" content="http://srs.sowdf.com/images/2016050501.jpg">
+<meta property="og:updated_time" content="2016-05-06T00:10:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第3期：JQ小知识.get()">
-<meta name="twitter:description" content="这段时间主要学习JQ，分享JQ的一些小知识！">
+<meta name="twitter:title" content="第5期：JQ中的index()">
+<meta name="twitter:description" content="jQuery中的clone()和index() 函数详解">
+<meta name="twitter:image" content="http://srs.sowdf.com/images/2016050501.jpg">
 
 
 
@@ -107,7 +109,7 @@
   };
 </script>
 
-  <title> 第3期：JQ小知识.get() | 战略性撤退 </title>
+  <title> 第5期：JQ中的index() | 战略性撤退 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -227,7 +229,7 @@
             
             
               
-                第3期：JQ小知识.get()
+                第5期：JQ中的index()
               
             
           </h1>
@@ -239,8 +241,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-02T23:00:16+08:00" content="2016-05-02">
-              2016-05-02
+            <time itemprop="dateCreated" datetime="2016-05-05T08:23:10+08:00" content="2016-05-05">
+              2016-05-05
             </time>
           </span>
 
@@ -250,8 +252,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/02/2016-05-02-get()/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/02/2016-05-02-get()/" itemprop="commentsCount"></span>
+                <a href="/2016/05/05/2016-04-30-index/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/05/2016-04-30-index/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -274,18 +276,26 @@
       
 
       
-        <h1 id="JQ中的get"><a href="#JQ中的get" class="headerlink" title="JQ中的get()"></a>JQ中的get()</h1><p>这个属性还是比较常用的，有的时候会想我有JQ的目的是什么，不就就是因为JQ好用吗？那么为啥还要去把他转成原生呢？其实有时候是不得不转下面会举两个例子！</p>
-<h2 id="先说说get-的用法"><a href="#先说说get-的用法" class="headerlink" title="先说说get()的用法"></a>先说说get()的用法</h2><p><a class="jsbin-embed" href="http://jsbin.com/zakiyu/embed?html,output" target="_blank" rel="external">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
-<p>从上面例子可以看出直接使用get()是没有用的，原因在于JQ选取的是一个集合就算是ID也是要加下标的</p>
-<h2 id="为什么要转成原生？"><a href="#为什么要转成原生？" class="headerlink" title="为什么要转成原生？"></a>为什么要转成原生？</h2><pre><code>在工作当中有时候JS真的没有办法做的事情就必须转成原生来做例如：
-    1.获取内容的高度
+        <h1 id="第5期：学习杂记"><a href="#第5期：学习杂记" class="headerlink" title="第5期：学习杂记"></a>第5期：学习杂记</h1><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>上期说的JQ插入方法，有一点没有说：为什么JQ要设置两个一样的功能的方法，这个其实和后续操作有关；<br>    $(‘ul’).append($li).css(‘background’,’red’)；//这个的意思是将li添加到ul内，ul    变红<br>    $li.appendTo($(‘ul’)).css(‘background’,’red’); //这个是将li插入ul内后，li变红    </p>
+<p>##基本介绍</p>
+<p> 这期主要介绍JQ中的两个方法，一个是克隆，另一个是索引</p>
+<p>##方法</p>
+<h3 id="clone"><a href="#clone" class="headerlink" title="clone()"></a>clone()</h3><pre><code>clone可以复制元素，也可以复制元素身上的所绑定的事件
+</code></pre><h3 id="index"><a href="#index" class="headerlink" title="index()"></a>index()</h3><pre><code>index两种用法：
 
-    2.元素之间的比较
-</code></pre><h3 id="1-获取元素的高度"><a href="#1-获取元素的高度" class="headerlink" title="1.获取元素的高度"></a>1.获取元素的高度</h3><p><a class="jsbin-embed" href="http://jsbin.com/bucoku/embed?html,console,output" target="_blank" rel="external">获取元素高度 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
-<p>像这样要获取这个带滚动条区域的真正高度在JQ下是没有办法获取的，所以必须转成原生转成原生的方式来获取</p>
-<h3 id="2-元素之间的比较"><a href="#2-元素之间的比较" class="headerlink" title="2.元素之间的比较"></a>2.元素之间的比较</h3><p><a class="jsbin-embed" href="http://jsbin.com/hukefe/embed?html,console,output" target="_blank" rel="external">元素间比较 on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.12"></script></p>
-<p>这两个东西取到的确实是同一个元素，但是JQ取到的是一个对象，是一个集合，所以 是不能比较的，必须转成原生才能比较，这个需要注意一些；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if([]==[]) //这两个相等吗 ？ </span><br><span class="line">if(&#123;&#125; == &#123;&#125;) //这个也是false</span><br></pre></td></tr></table></figure></p>
-<p>所以说对象与对象之间的比较还是需要注意一下的</p>
+    1.获取兄弟节点中的索引
+
+    2.获取筛选节点中的索引
+</code></pre><p>##代码</p>
+<h3 id="1-clone"><a href="#1-clone" class="headerlink" title="1.clone"></a>1.clone</h3><pre><code>$span = $(&apos;span&apos;).clone(); //先克隆节点
+
+$span = $(&apos;span&apos;).clone(true); //先克隆节点,true表示如果克隆元素有绑定事件，克隆出来的节点也同样具有绑定事件
+
+$(&apos;div&apos;).append($span); // 在将克隆的节点添加到指定位置
+</code></pre><h3 id="2-index"><a href="#2-index" class="headerlink" title="2.index"></a>2.index</h3><p><img src="http://srs.sowdf.com/images/2016050501.jpg" alt="index"></p>
+<p>还可以这么写：<br>$(‘span’).index($(‘#span1’));</p>
+<h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><p> 如果说你要准确获取$(‘span1’)的索引就必须进行筛选</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>clone() 方法生成被选元素的副本，包含子节点、文本和属性。并以jQuery对象的形式返回。并可以返回附加数据( data()函数 )和绑定事件；index()获得元素相对于所对于 index 位置。可以接收一个筛选参数，填写筛选参数后将忽略其他元素！</p>
 
       
     </div>
@@ -306,9 +316,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag">#javascript</a>
+            <a href="/tags/jQuery/" rel="tag">#jQuery</a>
           
-            <a href="/tags/JQuery/" rel="tag">#JQuery</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
           
         </div>
       
@@ -317,16 +327,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/30/2016-04-30-template/" rel="next" title="template 模板技术">
-                <i class="fa fa-chevron-left"></i> template 模板技术
+              <a href="/2016/05/02/2016-05-02-get()/" rel="next" title="第3期：JQ小知识.get()">
+                <i class="fa fa-chevron-left"></i> 第3期：JQ小知识.get()
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/05/2016-04-30-index/" rel="prev" title="第5期：JQ中的index()">
-                第5期：JQ中的index() <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/06/2016-05-06-each/" rel="prev" title="第6期：JQ中的each">
+                第6期：JQ中的each <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -353,8 +363,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/02/2016-05-02-get()/"
-           data-title="第3期：JQ小知识.get()" data-url="http://yoursite.com/2016/05/02/2016-05-02-get()/">
+      <div class="ds-thread" data-thread-key="2016/05/05/2016-04-30-index/"
+           data-title="第5期：JQ中的index()" data-url="http://yoursite.com/2016/05/05/2016-04-30-index/">
       </div>
     
   </div>
@@ -438,7 +448,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JQ中的get"><span class="nav-number">1.</span> <span class="nav-text">JQ中的get()</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先说说get-的用法"><span class="nav-number">1.1.</span> <span class="nav-text">先说说get()的用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要转成原生？"><span class="nav-number">1.2.</span> <span class="nav-text">为什么要转成原生？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取元素的高度"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.获取元素的高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-元素之间的比较"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.元素之间的比较</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第5期：学习杂记"><span class="nav-number">1.</span> <span class="nav-text">第5期：学习杂记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#补充"><span class="nav-number">1.1.</span> <span class="nav-text">补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clone"><span class="nav-number">1.1.1.</span> <span class="nav-text">clone()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#index"><span class="nav-number">1.1.2.</span> <span class="nav-text">index()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-clone"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.clone</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-index"><span class="nav-number">1.1.4.</span> <span class="nav-text">2.index</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tip"><span class="nav-number">1.2.</span> <span class="nav-text">Tip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
